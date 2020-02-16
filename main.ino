@@ -67,7 +67,7 @@ void loop() {
     unsigned int index = 0;
     bool once_end = false;
     //1周済みかつ、5分経過で更新する。
-    while(millis() - last_get_time < 5*60*1000 && !once_end) {
+    while(millis() - last_get_time < 5*60*1000 || !once_end) {
         lcd.setCursor(0,1);
         lcd.print(get_16len_text(news, index));
         index++;
