@@ -16,10 +16,10 @@ LiquidCrystal_I2C lcd(LCD_ADDRESS, 16, 2);
 void setup() {
     Serial.begin(9600);                 //シリアルポートは9600番
     
-	lcd.begin();
+    lcd.begin();
     lcd.clear();
-	lcd.backlight();
-	lcd.print("CNN Headlines:");
+    lcd.backlight();
+    lcd.print("CNN Headlines:");
 
     //WiFiに接続する。
     Serial.print("\nConnecting to ");
