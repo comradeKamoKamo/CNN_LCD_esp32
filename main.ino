@@ -51,14 +51,12 @@ void loop() {
     if(!get_news_from_cnn(&response)) {
         lcd.setCursor(0,1);
         lcd.print("Failed updating.");
-        delay(2000);
         while(true) {delay(1);}
     };
     String news;
     if(!get_news_plaintext(response, &news)) {
         lcd.setCursor(0,1);
         lcd.print("Failed parsing. ");
-        delay(2000);
         while(true) {delay(1);}
     }
     Serial.println(news);
