@@ -61,7 +61,7 @@ void loop() {
     }
     Serial.println(news);
     last_get_time = millis();
-    //3分おきに更新
+    
     unsigned int index = 0;
     bool once_end = false;
     //1周済みかつ、5分経過で更新する。
